@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NMedia</string>
+    <string name="error_loading">Что-то пошло не так. Попробуйте снова позже</string>
+    <string name="cancel">Отмена</string>
+
+    <!--    Карточный пост/Мероприятие -->
+    <string name="description_post_author_avatar">Аватар автора поста</string>
+    <string name="description_post_menu">Меню поста</string>
+    <string name="description_like_button">Лайк</string>
+    <!--  Меню  -->
+    <string name="menu_edit">Редактировать</string>
+    <string name="menu_delete">Удалить</string>
+
+    <!--    Пост/Мероприятие   -->
+    <string name="add_image">Изображение</string>
+    <string name="clear_image">Очистить изображение</string>
+    <string name="add_place">Место</string>
+    <string name="clear_coordinates">Очистить координаты</string>
+    <string name="add_date">Дата</string>
+    <string name="add_time">Время</string>
+    <string name="create_post">Создать</string>
+    <string name="avatar">Аватар</string>
+    <string name="users">Пользователи</string>
+    <string name="empty_datetime">Дата и время не могут быть пустыми</string>`
+    <string name="add_new_post">Добавить новый пост</string>
+    <string name="attachment">Вложение</string>
+    <string name="type_of_event">Тип мероприятия</string>
+    <string name="date_of_event">Дата мероприятия</string>
+    <string name="location">Местоположение</string>
+    <string name="posts">Посты</string>
+    <string name="events">Мероприятия</string>
+    <string name="add_post">Добавить пост</string>
+    <string name="add_event">Добавить мероприятие</string>
+    <string name="online">Онлайн</string>
+    <string name="offline">Офлайн</string>
+    <string name="position">Позиция</string>
+
+    <!-- Авторизация, регистрация -->
+    <string name="greeting">Привет! \n Давай начнем! \n Присоединяйся \n к сообществу!</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_out">Выйти</string>
+    <string name="join">Присоединиться</string>
+    <string name="invalid_auth">Неверный логин/пароль</string>
+    <string name="blankAuth">Логин или пароль не заполнены</string>
+    <string name="confirm_signOut">Вы уверены?</string>
+    <string name="name">Имя</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+    <string name="match_passwords">Пароли должны совпадать</string>
+    <string name="blankRegister">Имя, логин или пароль не заполнены</string>
+    <string name="clear_avatar">Удалить аватар</string>
+    <string name="description_preview">Предварительный просмотр изображения</string>
+    <string name="description_choose_gallery">Выберите изображение из галереи</string>
+    <string name="description_make_photo">Сделать фото</string>
+    <string name="close_button">Закрыть кнопку</string>
+    <string name="authorization">Авторизация</string>
+    <string name="button_back">Кнопка назад</string>
+
+    <!--  Работы  -->
+    <string name="empty_posts">Нет постов.\nЕсли вы создадите новый пост, он появится здесь</string>
+    <string name="job">Работа</string>
+    <string name="start">Начало</string>
+    <string name="finish">Конец</string>
+    <string name="jobs">Работы</string>
+    <string name="dash">–</string>
+    <string name="add_job">Добавить работу</string>
+    <string name="empty_jobs">Работы не добавлены</string>
+
+    <!-- Карты -->
+    <string name="permission_request">Требуется разрешение на местоположение</string>
+    <string name="user_location">Местоположение пользователя</string>
+    <string name="zoom_in">Увеличить</string>
+    <string name="zoom_out">Уменьшить</string>
+    <string name="place_pin">Установить метку</string>
+    <string name="coordinates">Координаты</string>
+    <string name="latitude_and_longitude">широта: %s\nдолгота: %s</string>
+    <string name="edit">Редактировать</string>
+    <string name="user">Пользователь</string>
+    <string name="description_full_screen_image">Изображение на весь экран</string>
+    <string name="link">Ссылка</string>
+    <string name="invalid_link">Некорректная ссылка</string>
+
+</resources>
