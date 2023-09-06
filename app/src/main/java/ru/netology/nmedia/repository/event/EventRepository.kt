@@ -11,6 +11,6 @@ interface EventRepository {
     suspend fun save(event: Event)
     suspend fun saveWithAttachment(event: Event, media: MediaModel)
     suspend fun likeById(event: Event)
-    suspend fun removeById(id: FeedItem)
+    suspend fun removeById(id: Int)
     suspend fun getById(id: Int): Event?
 }

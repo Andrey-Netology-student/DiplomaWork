@@ -36,7 +36,6 @@ class PostRemoteMediator @Inject constructor(
                     } ?: service.getLatestPosts(state.config.initialLoadSize)
                 }
                 LoadType.PREPEND -> return MediatorResult.Success(false)
-
                 LoadType.APPEND -> {
                     val id = postRemoteKeyDao.min() ?: return MediatorResult.Success(false)
                     service.getPostsBefore(id, state.config.pageSize)

@@ -107,11 +107,7 @@ class EventRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun removeById(id: FeedItem) {
-        TODO("Not yet implemented")
-    }
-
-    suspend fun removeById(id: Int) {
+    override suspend fun removeById(id: Int) {
         eventDao.getEventById(id)?.let { eventToDelete ->
             eventDao.removeById(id)
             try {

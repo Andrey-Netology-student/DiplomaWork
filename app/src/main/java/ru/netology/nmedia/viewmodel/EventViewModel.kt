@@ -10,6 +10,7 @@ import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
+import ru.netology.nmedia.dto.Coordinates
 import ru.netology.nmedia.dto.Event
 import ru.netology.nmedia.dto.FeedItem
 import ru.netology.nmedia.enumeration.AttachmentType
@@ -142,7 +143,7 @@ class EventViewModel @Inject constructor(
         }
     }
 
-    fun removeById(id: FeedItem) {
+    fun removeById(id: Int) {
         viewModelScope.launch {
             try {
                 repository.removeById(id)
