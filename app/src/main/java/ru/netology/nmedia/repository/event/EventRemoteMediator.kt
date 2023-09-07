@@ -84,7 +84,7 @@ class EventRemoteMediator @Inject constructor(
                         )
                     }
                 }
-                //eventDao.insert(body.toEntity())
+                eventDao.insert(body.toEntity())
             }
             return MediatorResult.Success(endOfPaginationReached = body.isEmpty())
         } catch (e: Exception) {

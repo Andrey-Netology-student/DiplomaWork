@@ -11,6 +11,7 @@ import ru.netology.nmedia.dao.wall.WallRemoteKeyDao
 import ru.netology.nmedia.db.AppDb
 import ru.netology.nmedia.entity.wall.WallEntity
 import ru.netology.nmedia.entity.wall.WallRemoteKeyEntity
+import ru.netology.nmedia.entity.wall.toEntity
 import ru.netology.nmedia.enumeration.RemoteKeyType
 import ru.netology.nmedia.error.ApiError
 import javax.inject.Inject
@@ -91,7 +92,7 @@ class WallRemoteMediator @Inject constructor(
                         )
                     }
                 }
-                //wallDao.insert(body.toEntity())
+                wallDao.insert(body.toEntity())
             }
             return MediatorResult.Success(endOfPaginationReached = body.isEmpty())
         } catch (e: Exception) {

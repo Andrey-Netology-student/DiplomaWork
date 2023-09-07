@@ -11,10 +11,9 @@ interface PostRepository {
     val data: Flow<PagingData<FeedItem>>
     fun userWall(id: Int): Flow<PagingData<FeedItem>>
     suspend fun likeById(post: Post)
-    suspend fun unlikeById(post: Long)
     suspend fun save(post: Post)
-    suspend fun saveWithAttachment(post: Post, media: MediaModel?)
+    suspend fun saveWithAttachment(post: Post, media: MediaModel)
     suspend fun removeById(id: Int)
-    suspend fun getById(id: Long): Post?
+    suspend fun getById(id: Int): Post?
     suspend fun wallRemoveById(id: Int)
 }
