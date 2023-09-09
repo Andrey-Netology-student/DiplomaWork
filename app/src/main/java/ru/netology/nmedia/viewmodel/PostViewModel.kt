@@ -108,14 +108,20 @@ class PostViewModel @Inject constructor(
         return if (edited.value == null || edited.value == empty) null else edited.value
     }
 
-    fun addCoordinates(coords: Coordinates) {
+
+    fun addCoordinates(coords: Coordinates) { //Функция для добавления координат
+        // Запускает корутину в рамках viewModelScope
         viewModelScope.launch {
+            //Изменяем значение живых данных _edited, копируя их и обновляя поле coords
             _edited.value = _edited.value?.copy(coords = coords)
         }
     }
 
+    // Функция для очистки координат
     fun clearCoordinates() {
+        // Запускает корутину в рамках viewModelScope
         viewModelScope.launch {
+            //Изменяет значение живых данных _edited, копируя их и обнуляя поле coords
             _edited.value = _edited.value?.copy(coords = null)
         }
     }

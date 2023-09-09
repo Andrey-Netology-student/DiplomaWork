@@ -132,9 +132,12 @@ class FeedViewHolder(
                 }
             }
 
+            // Проверяет, видимы ли координаты
             coordinates.isVisible = feedItem.coords != null
+            // Если есть координаты, устанавливаем слушатель нажатия
             feedItem.coords?.let { coords ->
                 coordinates.setOnClickListener {
+                    // Вызываем метод из слушателя на координаты
                     listener.onCoordinates(
                         coords.lat.toDouble(),
                         coords.lat.toDouble()

@@ -104,6 +104,10 @@ class EventViewModel @Inject constructor(
         _edited.value = empty
     }
 
+    fun getEditEvent(): Event? {
+        return if (edited.value == null || edited.value == empty) null else edited.value
+    }
+
     fun addCoordinates(coords: Coordinates) {
         viewModelScope.launch {
             _edited.value = _edited.value?.copy(coords = coords)
@@ -114,10 +118,6 @@ class EventViewModel @Inject constructor(
         viewModelScope.launch {
             _edited.value = _edited.value?.copy(coords = null)
         }
-    }
-
-    fun getEditEvent(): Event? {
-        return if (edited.value == null || edited.value == empty) null else edited.value
     }
 
     fun changeContent(

@@ -9,6 +9,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.net.toFile
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -18,6 +19,7 @@ import com.google.android.material.snackbar.Snackbar
 import ru.netology.nmedia.R
 import ru.netology.nmedia.databinding.FragmentNewPostBinding
 import ru.netology.nmedia.enumeration.AttachmentType
+import ru.netology.nmedia.ui.map.MapFragment
 import ru.netology.nmedia.utils.AndroidUtils
 import ru.netology.nmedia.viewmodel.PostViewModel
 
@@ -113,6 +115,19 @@ class NewPostFragment: Fragment() {
             media?.let {
                 binding.textViewImage.text = media.file.name
             }
+        }
+
+        // Coordinates
+        binding.addPlaceButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_newPostFragment_to_mapFragment,
+                bundleOf(
+                    MapFragment.ITEM_TYPE to MapFragment.Companion.ItemType.POST.name
+                )
+            )
+        }
+        binding.clearCoordinates.setOnClickListener {
+            viewModel.clearCoordinates()
         }
         return binding.root
     }
