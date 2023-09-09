@@ -69,7 +69,8 @@
                     android:layout_marginHorizontal="@dimen/common_spacing"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:textColor="@color/hint_color"                    tools:text="20 апреля 2023" />
+                    android:textColor="@color/hint_color"
+                    tools:text="20 апреля 2023" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

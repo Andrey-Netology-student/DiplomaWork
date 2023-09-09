@@ -17,7 +17,7 @@ interface WallDao {
 
     // Запрос для получения записи с определенным идентификатором
     @Query("SELECT * FROM WallEntity WHERE id = :id")
-    suspend fun getPostById(id: kotlin.Int): WallEntity?
+    suspend fun getPostById(id: Int): WallEntity?
 
     // Запрос для проверки, пуста ли таблица "WallEntity"
     @Query("SELECT COUNT(*) == 0 FROM WallEntity")

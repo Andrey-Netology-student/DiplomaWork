@@ -108,12 +108,13 @@
                 android:inputType="textMultiLine"
                 android:padding="@dimen/common_spacing"
                 android:background="@drawable/card_line"
-                app:layout_constraintTop_toBottomOf="@id/add_time" />
+                app:layout_constraintTop_toBottomOf="@id/add_time"
+                android:hint="@string/dash" />
 
         <EditText
                 android:id="@+id/editText_link"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
+                android:layout_height="48dp"
                 android:background="@drawable/card_line"
                 android:hint="@string/link"
                 android:importantForAutofill="no"
@@ -201,6 +202,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/clear_image"
                 android:contentDescription="@string/clear_coordinates" />
+
 
         <com.google.android.material.button.MaterialButton
                 android:id="@+id/create_button"

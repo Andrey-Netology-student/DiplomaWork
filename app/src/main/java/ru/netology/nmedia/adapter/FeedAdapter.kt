@@ -26,6 +26,7 @@ class FeedAdapter(
     private val listener: OnInteractionListener
 ) : PagingDataAdapter<FeedItem, FeedViewHolder>(FeedDiffCallback()) {
 
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(
         holder: FeedViewHolder,

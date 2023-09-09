@@ -23,13 +23,13 @@ class WallRemoteMediator @Inject constructor(
     private val appDb: AppDb,
     private val wallRemoteKeyDao: WallRemoteKeyDao,
     private val authorId: Int
-) : RemoteMediator<Long, WallEntity>() {
+) : RemoteMediator<Int, WallEntity>() {
 
     private var id = 0
 
     override suspend fun load(
         loadType: LoadType,
-        state: PagingState<Long, WallEntity>
+        state: PagingState<Int, WallEntity>
     ): MediatorResult {
 
         if (authorId != id) {

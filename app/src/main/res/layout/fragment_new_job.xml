@@ -20,7 +20,7 @@
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/job_name"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
+                android:layout_height="48dp"
                 android:layout_margin="@dimen/common_spacing"
                 android:background="@drawable/card_line"
                 android:hint="@string/job"
@@ -29,7 +29,7 @@
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/job_position"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
+                android:layout_height="48dp"
                 android:layout_margin="@dimen/common_spacing"
                 android:background="@drawable/card_line"
                 android:hint="@string/position"

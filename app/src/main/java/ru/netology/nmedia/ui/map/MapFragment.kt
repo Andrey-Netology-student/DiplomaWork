@@ -32,6 +32,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import ru.netology.nmedia.R
 import ru.netology.nmedia.databinding.FragmentMapBinding
+import ru.netology.nmedia.databinding.PlaceBinding
 import ru.netology.nmedia.dto.Coordinates
 import ru.netology.nmedia.viewmodel.EventViewModel
 import ru.netology.nmedia.viewmodel.MapViewModel
@@ -156,7 +157,7 @@ class MapFragment : Fragment() { //Определяет класс MapFragment, 
                         //Проверяет, что местоположение не равно null
                         it?.let { coordinates ->
                             //Создаёт экземпляр класса PlaceBinding с помощью метода inflate() и передаёт ему layoutInflater
-                            val placeBinding = FragmentMapBinding.inflate(layoutInflater)
+                            val placeBinding = PlaceBinding.inflate(layoutInflater)
                             // Добавляем метку на карту с координатами из местоположения и используя ViewProvider для отображения метки на карте
                             collection.addPlacemark(
                                 Point(coordinates.lat.toDouble(), coordinates.long.toDouble()),

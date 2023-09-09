@@ -74,7 +74,7 @@
     <string name="user_location">Местоположение пользователя</string>
     <string name="zoom_in">Увеличить</string>
     <string name="zoom_out">Уменьшить</string>
-    <string name="place_pin">Установить метку</string>
+    <string name="place_pin">Установите булавку</string>
     <string name="coordinates">Координаты</string>
     <string name="latitude_and_longitude">широта: %s\nдолгота: %s</string>
     <string name="edit">Редактировать</string>

@@ -17,7 +17,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:id="@+id/loginWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/common_spacing"
@@ -33,26 +32,28 @@
     <EditText
             android:id="@+id/signUpLogin"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/edit_text_height"
+            android:layout_height="48dp"
             android:layout_margin="@dimen/common_spacing"
             android:autofillHints="username"
             android:background="@drawable/card_line"
             android:hint="@string/login"
             android:inputType="text"
             android:paddingHorizontal="@dimen/common_spacing"
-            app:layout_constraintBottom_toTopOf="@id/signUpPassword" />
+            app:layout_constraintBottom_toTopOf="@id/signUpPassword"
+            tools:layout_editor_absoluteX="16dp" />
 
     <EditText
             android:id="@+id/signUpPassword"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/edit_text_height"
+            android:layout_height="48dp"
             android:layout_margin="@dimen/common_spacing"
             android:autofillHints="password"
             android:background="@drawable/card_line"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingHorizontal="@dimen/common_spacing"
-            app:layout_constraintBottom_toTopOf="@id/loginButton" />
+            app:layout_constraintBottom_toTopOf="@id/loginButton"
+            tools:layout_editor_absoluteX="16dp" />
 
     <com.google.android.material.button.MaterialButton
             android:id="@+id/loginButton"

@@ -39,12 +39,10 @@ object AndroidUtils {
         return parsedDate.format(formatter)
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     fun formatDatePicker(date: Date): String {
         return SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(date)
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     fun formatTimePicker(date: Date): String {
         return SimpleDateFormat("HH:mm", Locale.ROOT).format(date)
     }
