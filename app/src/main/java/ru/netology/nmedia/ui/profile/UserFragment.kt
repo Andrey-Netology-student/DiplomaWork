@@ -27,6 +27,7 @@ import ru.netology.nmedia.enumeration.AttachmentType
 import ru.netology.nmedia.ui.MediaLifecycleObserver
 import ru.netology.nmedia.ui.attachment.ImageFragment
 import ru.netology.nmedia.ui.attachment.VideoFragment
+import ru.netology.nmedia.ui.map.MapFragment
 import ru.netology.nmedia.view.load
 import ru.netology.nmedia.viewmodel.JobViewModel
 import ru.netology.nmedia.viewmodel.PostViewModel
@@ -88,7 +89,7 @@ class UserFragment : Fragment() {
             }
 
             override fun onRemove(id: Int) {
-                TODO("Not yet implemented")
+                postViewModel.wallRemoveById(id)
             }
 
             override fun onEdit(feedItem: FeedItem) {
@@ -105,7 +106,15 @@ class UserFragment : Fragment() {
             }
 
             override fun onCoordinates(lat: Double, long: Double) {
-                TODO("Not yet implemented")
+                findNavController().navigate(
+                    // Навигация к фрагменту MapFragment
+                    R.id.action_userFragment_to_mapFragment,
+                    //Передача данных о координатах широты и долготы в виде аргументов через bundleOf
+                    bundleOf(
+                        MapFragment.LAT_KEY to lat,
+                        MapFragment.LONG_KEY to long
+                    )
+                )
             }
 
             override fun onVideo(url: String) {

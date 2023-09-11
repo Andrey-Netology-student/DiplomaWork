@@ -11,6 +11,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.net.toFile
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -21,6 +22,7 @@ import ru.netology.nmedia.R
 import ru.netology.nmedia.databinding.FragmentNewPostBinding
 import ru.netology.nmedia.enumeration.AttachmentType
 import ru.netology.nmedia.enumeration.EventType
+import ru.netology.nmedia.ui.map.MapFragment
 import ru.netology.nmedia.utils.AndroidUtils
 import ru.netology.nmedia.viewmodel.EventViewModel
 import java.util.*
@@ -173,6 +175,22 @@ class NewEventFragment : Fragment() {
             media?.let {
                 binding.textViewImage.text = media.file.name
             }
+        }
+
+        // Coordinates
+        // Устанавливаем слушатель нажатия для кнопки addPlaceButton
+        binding.addPlaceButton.setOnClickListener {
+            // Навигируемся на MapFragment с передачей параметров
+            findNavController().navigate(
+                R.id.action_newEventFragment_to_mapFragment,
+                bundleOf(
+                    // Передаёт тип элемента EVENT в MapFragment
+                    MapFragment.ITEM_TYPE to MapFragment.Companion.ItemType.EVENT.name
+                )
+            )
+        }
+        binding.clearCoordinates.setOnClickListener {
+            viewModel.clearCoordinates()
         }
         return binding.root
     }

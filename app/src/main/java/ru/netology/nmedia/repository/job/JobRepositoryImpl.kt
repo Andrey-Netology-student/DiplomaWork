@@ -32,7 +32,7 @@ class JobRepositoryImpl @Inject constructor(
                 throw ApiError(response.code(), response.message())
             }
             val data = response.body() ?: throw ApiError(response.code(), response.message())
-            //jobDao.insert(data.toEntity())
+            jobDao.insert(data.toEntity())
         } catch (e: IOException) {
             throw NetworkError
         } catch (e: Exception) {
@@ -47,7 +47,7 @@ class JobRepositoryImpl @Inject constructor(
                 throw ApiError(response.code(), response.message())
             }
             val data = response.body() ?: throw ApiError(response.code(), response.message())
-            //jobDao.insert(JobEntity.fromDto(data))
+            jobDao.insert(JobEntity.fromDto(data))
         } catch (e: IOException) {
             throw NetworkError
         } catch (e: Exception) {

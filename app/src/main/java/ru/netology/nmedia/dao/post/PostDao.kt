@@ -27,7 +27,7 @@ interface PostDao {
     suspend fun insert(posts: List<PostEntity>) // Вставить список постов в таблицу
 
     @Query("DELETE FROM PostEntity WHERE id = :id")
-    suspend fun removeById(id: Long) // Удалить пост по его идентификатору
+    suspend fun removeById(id: Int) // Удалить пост по его идентификатору
 
     @Query("DELETE FROM PostEntity")
     suspend fun clear() //Для удаления всех записей из таблицы PostEntity

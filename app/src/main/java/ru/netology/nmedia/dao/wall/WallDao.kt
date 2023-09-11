@@ -17,7 +17,7 @@ interface WallDao {
 
     // Запрос для получения записи с определенным идентификатором
     @Query("SELECT * FROM WallEntity WHERE id = :id")
-    suspend fun getPostById(id: Long): WallEntity?
+    suspend fun getPostById(id: Int): WallEntity?
 
     // Запрос для проверки, пуста ли таблица "WallEntity"
     @Query("SELECT COUNT(*) == 0 FROM WallEntity")
@@ -37,5 +37,5 @@ interface WallDao {
 
     // Метод для удаления записи с определенным идентификатором из таблицы "WallEntity"
     @Query("DELETE FROM WallEntity WHERE id = :id")
-    suspend fun removeById(id: kotlin.Int)
+    suspend fun removeById(id: Int)
 }

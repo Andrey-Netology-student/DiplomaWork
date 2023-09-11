@@ -62,7 +62,7 @@
             <EditText
                     android:id="@+id/signUpName"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_height="48dp"
                     android:autofillHints="name"
                     android:background="@drawable/card_line"
                     android:layout_margin="@dimen/common_spacing"
@@ -74,7 +74,7 @@
             <EditText
                     android:id="@+id/signUpLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_height="48dp"
                     android:layout_marginVertical="@dimen/common_spacing"
                     android:autofillHints="username"
                     android:background="@drawable/card_line"
@@ -87,7 +87,7 @@
             <EditText
                     android:id="@+id/signUpPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_height="48dp"
                     android:layout_marginVertical="@dimen/common_spacing"
                     android:autofillHints="password"
                     android:background="@drawable/card_line"
@@ -100,7 +100,7 @@
             <EditText
                     android:id="@+id/confirmPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_height="48dp"
                     android:layout_marginVertical="@dimen/common_spacing"
                     android:autofillHints="password"
                     android:background="@drawable/card_line"

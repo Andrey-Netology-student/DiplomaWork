@@ -11,6 +11,7 @@ import ru.netology.nmedia.dao.wall.WallRemoteKeyDao
 import ru.netology.nmedia.db.AppDb
 import ru.netology.nmedia.entity.wall.WallEntity
 import ru.netology.nmedia.entity.wall.WallRemoteKeyEntity
+import ru.netology.nmedia.entity.wall.toEntity
 import ru.netology.nmedia.enumeration.RemoteKeyType
 import ru.netology.nmedia.error.ApiError
 import javax.inject.Inject
@@ -22,13 +23,13 @@ class WallRemoteMediator @Inject constructor(
     private val appDb: AppDb,
     private val wallRemoteKeyDao: WallRemoteKeyDao,
     private val authorId: Int
-) : RemoteMediator<Long, WallEntity>() {
+) : RemoteMediator<Int, WallEntity>() {
 
     private var id = 0
 
     override suspend fun load(
         loadType: LoadType,
-        state: PagingState<Long, WallEntity>
+        state: PagingState<Int, WallEntity>
     ): MediatorResult {
 
         if (authorId != id) {
@@ -91,7 +92,7 @@ class WallRemoteMediator @Inject constructor(
                         )
                     }
                 }
-                //wallDao.insert(body.toEntity())
+                wallDao.insert(body.toEntity())
             }
             return MediatorResult.Success(endOfPaginationReached = body.isEmpty())
         } catch (e: Exception) {
