@@ -1,10 +1,8 @@
 package ru.netology.nmedia.adapter
 
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.PopupMenu
-import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -28,7 +26,6 @@ class JobAdapter(
         return JobViewHolder(binding, listener)
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
         getItem(position)?.let { holder.bind(it) }
     }
@@ -40,7 +37,6 @@ class JobViewHolder(
     private val listener: Listener
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun bind(job: Job) {
         with(binding) {
             jobName.text = job.name

@@ -109,15 +109,11 @@ class EventViewModel @Inject constructor(
     }
 
     fun addCoordinates(coords: Coordinates) {
-        viewModelScope.launch {
             _edited.value = _edited.value?.copy(coords = coords)
-        }
     }
 
     fun clearCoordinates() {
-        viewModelScope.launch {
             _edited.value = _edited.value?.copy(coords = null)
-        }
     }
 
     fun changeContent(

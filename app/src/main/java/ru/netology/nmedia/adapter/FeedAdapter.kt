@@ -1,12 +1,10 @@
 package ru.netology.nmedia.adapter
 
 import android.net.Uri
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
-import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -27,7 +25,6 @@ class FeedAdapter(
 ) : PagingDataAdapter<FeedItem, FeedViewHolder>(FeedDiffCallback()) {
 
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(
         holder: FeedViewHolder,
         position: Int,
@@ -44,7 +41,6 @@ class FeedAdapter(
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: FeedViewHolder, position: Int) {
         getItem(position)?.let { holder.bind(it) }
     }
@@ -61,7 +57,6 @@ class FeedViewHolder(
     private val listener: OnInteractionListener
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun bind(feedItem: FeedItem) {
         binding.apply {
             feedItem.authorAvatar?.let { avatar.load(it) }

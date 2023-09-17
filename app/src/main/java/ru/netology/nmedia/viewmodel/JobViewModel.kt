@@ -1,7 +1,5 @@
 package ru.netology.nmedia.viewmodel
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -122,7 +120,6 @@ class JobViewModel @Inject constructor(
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun getCurrentJob(list: List<Job>) =
         list.maxBy { AndroidUtils.dateToTimestamp(it.start) }
 }
